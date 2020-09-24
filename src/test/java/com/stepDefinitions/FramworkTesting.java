@@ -43,5 +43,6 @@ public class FramworkTesting {
         String actualTitle=driver.getTitle();
         Assert.assertEquals("Not equal", actualTitle,expectedTitle);
         logger.debug("Test is finished");
+        driver.quit();
     }
 }
