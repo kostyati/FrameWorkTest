@@ -8,6 +8,11 @@ import org.apache.logging.log4j.Logger;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
 
 public class FramworkTesting {
 
@@ -16,11 +21,15 @@ public class FramworkTesting {
     static WebDriver driver;
 
     @Given("User on the Google page")
-    public void userOnTheGooglePage() {
+    public void userOnTheGooglePage() throws MalformedURLException {
 
-        WebDriverManager.chromedriver().setup();
+        //WebDriverManager.chromedriver().setup();
         logger.debug("Test start");
-        driver=new ChromeDriver();
+       // driver=new ChromeDriver();
+        ChromeOptions chromeOptions=new ChromeOptions();
+        chromeOptions.setCapability("browserVersion","76");
+        chromeOptions.setCapability("platformName","Ubuntu 20.04.1");
+        WebDriver driver=new RemoteWebDriver(new URL("localhost:8080"), chromeOptions);
         driver.get("https://www.google.com");
         logger.debug("Google page is open");
 
