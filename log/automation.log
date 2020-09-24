@@ -3,3 +3,7 @@
 2020-09-23 20:00:01 [main] DEBUG FramworkTesting:31 - verifying title
 2020-09-23 20:00:01 [main] DEBUG FramworkTesting:34 - Test is finished
 2020-09-23 20:13:51 [main] DEBUG FramworkTesting:27 - Test start
+2020-09-23 20:19:14 [main] DEBUG FramworkTesting:29 - Test start
+2020-09-23 20:19:18 [main] DEBUG FramworkTesting:36 - Google page is open
+2020-09-23 20:19:18 [main] DEBUG FramworkTesting:42 - verifying title
+2020-09-23 20:19:18 [main] DEBUG FramworkTesting:45 - Test is finished
